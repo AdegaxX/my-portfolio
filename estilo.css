@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(3, 0, 26);
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+header ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+header ul li img {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    margin-right: 5px;
+}
+header ul li img:hover {
+    background-color: rgba(255, 255, 255, 0.733);
+    border-radius: 8px;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Posição Z (camadas) de onde vai ficar */
+}
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Com essa linha, as bordas que sobram da imagem ficam escondidas */
+}
+section:before { /* Adiciona a sombra na base da imagem do fundo */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, rgb(3, 0, 26),transparent);
+    z-index: 1000;
+}
+#text {
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 5px 5px 8px rgba(26, 30, 44, 0.849);
+}
+.conteudo {
+    padding: 50px;
+    position: relative;
+    background-color: rgb(3, 0, 26);
+    color: #fff;
+}
+.conteudo h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.conteudo p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#imgwhite img { /* Essas 3 linhas de comando servem para centralizar a imagem. */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.site {
+    background-color: rgb(3, 0, 26);
+}
+.site iframe {
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: center;
+    width: 70vw;
+    height: 60vh;
+}
+.site p {
+    color: #fff;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.carrossel {
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+
+}
+.container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+.container img {
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+}
+.txtlogo {
+    color: #fff;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
